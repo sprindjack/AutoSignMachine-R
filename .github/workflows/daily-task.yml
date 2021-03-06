@@ -28,7 +28,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        repository: GitHub-Xzhi/AutoSignMachine
+        repository: sprindjack/AutoSignMachine
       
     # 设置服务器时区为东八区 
     - name: Set time zone
