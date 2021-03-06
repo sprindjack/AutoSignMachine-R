@@ -27,6 +27,8 @@ jobs:
     # 检出
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        repository: GitHub-Xzhi/AutoSignMachine
       
     # 设置服务器时区为东八区 
     - name: Set time zone
@@ -73,7 +75,8 @@ jobs:
         password2: ${{ secrets.unicom_password2 }}
         appid2: ${{ secrets.unicom_appid2 }}
       run: |
-         node index.js unicom --user=${user} --password=${password} --appid=${appid}  
+         node index.js unicom --user=${user} --password=${password} --appid=${appid} 
+         sleep 10
          node index.js unicom --user=${user2} --password=${password2} --appid=${appid2}
      # run: node index.js unicom --user=${user} --password=${password} --appid=${appid}  --tryrun --tasks dailygameflow
 
